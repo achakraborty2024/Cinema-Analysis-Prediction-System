@@ -60,8 +60,8 @@ This repository contains the full codebase, documentation, and deliverables for 
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/autonomous-supply-chain-engine.git
-   cd autonomous-supply-chain-engine
+   git clone https://github.com/achakraborty2024/Cinema-Analysis-Prediction-System.git
+   cd Cinema-Analysis-Prediction-System
 ````
 
 2. **Install dependencies**
