@@ -1,97 +1,100 @@
-# Ciname Analysis and Prediction System
-### AAI 590 - Capstone Project | Advanced AI Systems  
+# Cinema Analytics and Prediction System  
+### AAI-590 Capstone Project | Team 5  
+**Authors**: Arup Chakraborty, Seema Mittal, Rene Ortiz  
 
+---
 
 ## Overview
 
-This repository contains the full codebase, documentation, and deliverables for a 7-week capstone project that builds an **Autonomous Supply Chain Optimization Engine**. The system leverages state-of-the-art machine learning, reinforcement learning, and graph neural networks to solve real-world supply chain challenges including:
+This project leverages machine learning (ML) and deep learning (DL) to analyze metadata from over 4,800 Hollywood films and provide predictive insights across multiple dimensions, including:
 
-- Demand Forecasting  
-- Inventory Optimization  
-- Production Planning  
-- Logistics Coordination
+-  Box Office Revenue Prediction  
+-  Success Classification  
+-  Genre Prediction using NLP  
+-  Content-Based Movie Recommendation  
 
----
-
-## Key Technologies
-
-- **Machine Learning Models**: LSTM, GRU, Temporal Fusion Transformer (TFT)  
-- **Reinforcement Learning**: DQN, Multi-Agent RL  
-- **Graph Neural Networks**: GAT, GCN for supply network modeling  
-- **Probabilistic Modeling**: Monte Carlo Simulation, Bayesian Uncertainty  
-- **MLOps**: Docker, CI/CD, Real-time APIs, Monitoring  
-- **Visualization**: Streamlit, React Dashboards  
+Built as part of the AAI-590 capstone, this solution aims to demonstrate how AI can support decision-making in the creative industry using structured and unstructured movie data.
 
 ---
 
-## System Architecture
+## Problem Statement
 
-- Modular microservices via Docker  
-- Event-driven ML inference engine  
-- Real-time data integration via simulated IoT pipeline  
-- Interactive dashboards for live insights and decision support  
-
----
-
-## Repository Structure
-
-```
-
-├── data/                     # Synthetic & real-world datasets
-├── notebooks/               # Prototyping notebooks for models
-├── src/                     # Core modules: forecasting, optimization, RL
-│   ├── demand\_forecasting/
-│   ├── reinforcement\_learning/
-│   ├── graph\_modeling/
-│   └── decision\_engine/
-├── app/                     # Streamlit frontend and APIs
-├── docker/                  # Dockerfiles and environment configs
-├── tests/                   # Unit and integration tests
-├── docs/                    # Documentation and architecture diagrams
-├── requirements.txt
-├── docker-compose.yml
-└── README.md
-
-````
+We aim to answer key questions using AI:
+- How much revenue will a movie likely earn?
+- Will the movie be commercially successful?
+- What genres best represent the plot?
+- What similar movies can be recommended?
+- *(Bonus)* What poster would best represent the movie?
 
 ---
 
-## Setup Instructions
+## Features
 
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/achakraborty2024/Cinema-Analysis-Prediction-System.git
-   cd Cinema-Analysis-Prediction-System
-````
-
-2. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the system locally**
-
-   ```bash
-   docker-compose up --build
-   ```
-
-4. **Access the dashboard**
-   Visit `http://localhost:8501` to explore the UI.
+| Module | Description |
+|--------|-------------|
+| Revenue Prediction | Regression models (XGBoost, MLP) for box office forecasting |
+| Success Classification | ML classifier using KPIs like vote average and revenue |
+| Genre Classification | BERT-based multi-label classifier from movie plots |
+| Movie Recommendation | Embedding-based content similarity using FAISS |
+| Dashboard UI | User interface built with Streamlit or Gradio |
 
 ---
 
-## Results & Performance
+##  End Users
 
-| Metric                   | Target  | Achieved  |
-| ------------------------ | ------- | --------- |
-| Forecast Accuracy (MAPE) | < 15%   | **13.2%** |
-| Inventory Cost Reduction | 15–25%  | **22.8%** |
-| Stockout Reduction       | 40–60%  | **55.4%** |
-| Real-time Latency        | < 100ms | **87ms**  |
+This system is built for:
+-  **Film Studios & Producers** – for forecasting and risk analysis  
+-  **Streaming Platforms** – for content recommendation engines  
+-  **Market Analysts** – for trend analysis and KPIs  
+-  **Consumers** – for intelligent viewing recommendations  
+
+---
+
+## Dataset
+
+We use the **Hollywood Movies Dataset** from Kaggle, which contains:
+- Movie metadata (budget, revenue, cast, release date, etc.)
+- Plot overviews (for NLP analysis)
+- Genre and production info
+
+ In a live product, this data would be fetched dynamically from:
+- [IMDb API](https://developer.imdb.com/)
+- [TMDb API](https://developers.themoviedb.org/3)
+
+---
+
+## Hypothesis & Final Goal
+
+> **Hypothesis**:  
+> Movie performance and genre affinity can be accurately predicted using a combination of structured metadata and unstructured plot summaries processed by ML/DL models.
+
+ **Final Deliverable**:  
+A live, web-based platform hosted via Hugging Face or Vercel that enables users to:
+- Upload/select a movie
+- View predicted revenue & success likelihood
+- Analyze genre classification
+- Receive AI-powered similar movie suggestions
+
+---
+
+## References
+
+1. Muttalib, M. (2023). *Hollywood Movies Dataset*. Kaggle. https://www.kaggle.com/datasets/mohdmuttalib/hollywood-movies-dataset  
+2. IMDb. (n.d.). *IMDb API Documentation*. https://developer.imdb.com/  
+3. The Movie Database (TMDb). (n.d.). *TMDb API Overview*. https://developers.themoviedb.org/3/getting-started/introduction  
+4. AI in Screen Trade. (2024, July 17). *The role of AI in predicting box office success and audience preferences*. https://aiinscreentrade.com/2024/07/17/the-role-of-ai-in-predicting-box-office-success-and-audience-preferences/
+
+---
+
+## Contributors
+
+- Arup Chakraborty  
+- Seema Mittal  
+- Rene Ortiz  
 
 ---
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is released under the [MIT License](LICENSE).
+
