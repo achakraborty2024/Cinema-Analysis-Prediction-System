@@ -35,7 +35,7 @@ We aim to answer key questions using AI:
 | Revenue Prediction | Regression models (XGBoost, MLP) for box office forecasting |
 | Success Classification | ML classifier using KPIs like vote average and revenue |
 | Genre Classification | BERT-based multi-label classifier from movie plots |
-| Movie Recommendation | Embedding-based content similarity using FAISS |
+| Movie Recommendation | Embedding-based content similarity using BERT, TF-IDF, and LSTM  |
 | Dashboard UI | User interface built with Streamlit or Gradio |
 
 ---
